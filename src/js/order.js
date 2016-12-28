@@ -1,0 +1,12 @@
+$('#choose1').on('click',function(){
+	$('#choose1').attr('src','images/p1.jpg')
+	$('#buy1').attr('src','images/buy_06.jpg');
+	$("#radio1").css('display','inline-block');
+	$('#choose2').attr('src','images/p2.jpg');
+})
+$('#choose2').on('click',function(){
+	$('#choose2').attr('src','images/p4.jpg');
+	$('#buy1').attr('src','images/buy_07.jpg');
+	$("#radio1").css('display','none');
+	$('#choose1').attr('src','images/p3.jpg');
+})

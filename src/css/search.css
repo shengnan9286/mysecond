@@ -1,0 +1,385 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+html{
+	font-size:100px ;
+}
+body{
+	font-size:0.1rem ;
+	font-family: "微软雅黑";
+	color: #666666;
+}
+header{
+	width: 100%;
+	height: 0.32rem;
+	background: #f7f7f7;
+	border-bottom:1px solid #c7c7c7;
+}
+#headermain{
+	/*border: 1px solid blue;*/
+	margin: 0 auto;
+	width: 70%;
+	height: 0.32rem;
+	display: flex;
+	justify-content: space-between;
+}
+#headermain p a{
+	color: #666666;
+}
+#headermain p{
+	line-height: 0.32rem;
+	display: flex;
+	color: #666666;
+}
+#headermain p  span{
+	margin-right: 0.1rem;	
+	margin-left: 0.1rem;
+}
+/*搜索区域*/
+.searchwrap1{
+	border-bottom: 2px solid #4bac20;
+	width: 100%;}
+#search{
+width: 70%;
+margin: 0 auto;
+padding-top: 10px;
+height: 100px;
+display: flex;
+align-items: center;
+/*overflow: hidden;*/
+}
+#search .left1{float: left;}
+#search .right1{
+	/*border: 1px solid red;*/
+	float: left;
+margin-left: 10%;
+position: relative;
+width: 80%;}
+#search .right1 p span{
+font-size: 13px;	
+margin-right: 2%;
+padding: 5px 10px;
+border-radius: 3px;}
+#search .inputs{
+	margin-top: 10px;
+	width: 80%;
+	height: 44px;
+	position: relative;
+	/*border: 1px solid red;*/
+}
+#search .right1 .inputs input{
+width: 85%;
+height: 44px;
+float: left;
+border: 2px solid #4bac20;
+box-sizing: border-box;
+}
+#search .right1 .s1{position: absolute;
+right:36%;
+top: 45px;
+}
+#search .right1 button{height: 44px;
+width:15%;
+border: 0px;
+color: white;
+float: left;
+font-weight: bold;
+background: #4bac20;
+line-height: 44px;
+vertical-align: middle;}
+/*点击菜单按钮变换颜色*/
+.change{
+	background: #4bac20;
+	color: white;
+}
+
+
+/*搜索内容列表*/
+.wrapp{
+	width: 100%;
+	position: relative;
+	/*border: 1px solid red ;*/
+	/*overflow: hidden;*/
+}
+.pic{
+	position: relative;
+	width: 960px;
+	height: 120px;
+	background: url('../images/0.png');
+	margin:0 auto;
+	margin-bottom: 10px;
+}
+#header{
+	box-sizing: border-box;
+	padding-top: 15px;
+	width: 960px;
+	margin:0 auto;
+	/*border: 1px solid green ;*/
+}
+.fontColor{
+	color: #666666;
+}
+.fontW{
+	font-weight: bold;
+}
+#topMain{
+	margin-top: 15px;
+	box-sizing: border-box;
+	padding: 15px 22px;
+	background: #fff9d6;
+	border: 1px solid #ffdb84;
+	width: 960px;
+	height: 124px;
+}
+#topMain p span{
+	color: red;
+}
+.maintop{
+	margin-top: 18px;
+}
+#topMain .maintop p{
+	margin-bottom: 10px;
+}
+#topMain .maintop span{
+	margin-right: 19px;
+	color: #2e74d3;
+	cursor: pointer;
+}	
+#bottomMain{
+	box-sizing: border-box;
+	border:1px solid #dfdfe1;
+	padding-top: 18px;
+	padding-left: 20px;
+	border-top:transparent;
+	width: 960px;
+	height: 118px;
+}
+.mainbottom span{
+	margin-right: 19px;
+	box-sizing: border-box;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	color: #2e74d3;
+	cursor: pointer;
+}
+.mainbottom p{
+	margin-bottom: 5px;
+}
+.mainbottom span:hover{
+	background:#2e74d3;
+	border-radius: 2px;
+	color: white; 
+}
+.posit{
+	position: relative;
+	
+}
+.txt{
+	position: absolute;
+	top:10px;
+	left: 50px;
+	width: 307px;
+	height: 29px;
+	box-sizing: border-box;
+	padding-left: 5px;
+	border:1px solid #fa9f08;
+}
+.btn{
+	color:white;
+	top:11px;
+	left: 284px;
+	position: absolute;
+	width: 72px;	
+	height: 27px;	
+	background: #ffa61e;
+	border:0;
+}
+/*侧边栏浮动*/
+#folatw{
+	position: fixed;
+	border: 1px solid #dfdfe1;
+	border-bottom:transparent;
+	right: 30px;
+	top: 300px;
+	box-sizing: border-box;
+	width: 110px;	
+	height: 241px;
+}
+.folattop{
+	box-sizing: border-box;
+	border-bottom: 1px solid #dfdfe1;
+	width: 100%;
+	height: 121px;
+	color: #33b4e9;
+	font-family: fantasy;
+	font-weight: bold;
+	padding-left: 13px;
+	padding-top: 10px;
+}
+.folattop p{	
+	font-size: 18px;		
+}
+.folattop .ftopmianfont{
+	float: left;
+	box-sizing: border-box;
+	border: 1px solid #33b4e9;
+	margin-top: 25px;
+	padding: 3px 3px;
+	border-radius: 3px;
+	font-size: 14px;
+	width: 38px;
+	height: 45px;
+}
+.folatRight{
+	margin-top: 7px;
+	margin-right: 11px;
+	float: right;
+}
+/*搜索内容区*/
+#main2{
+	position: relative;
+	width: 960px;
+	/*height: 1700px;*/
+	margin: 14px auto;
+	overflow: hidden;
+}
+#mainLeft{
+	box-sizing: border-box;
+	width: 776px;
+	height: 100%;
+	border-top: 1px solid #4bac20;
+}
+.nav2{
+	position: relative;
+	box-sizing: border-box;
+	border-top: 1px solid #4bac20;
+	border-bottom: 1px solid #dfdfe1;			
+	border-left: 1px solid #dfdfe1;			
+	border-right: 1px solid #dfdfe1;						
+	width: 776px;
+	height: 37px;
+	font-size: 11px;
+}
+.count{
+	float: left;
+	box-sizing: border-box;
+	text-align: center;
+	width: 100px;
+	height: 36px;
+	line-height: 36px;
+}
+.count:hover{
+	background: #e4e4e4;
+}
+.list{
+	position: absolute;
+	top:12px;
+	left: 220px;
+}
+.list p{
+	position: relative;
+	width: 65px;
+	float: left;
+	margin-right: 10px;
+}
+.list p span{
+	position: absolute;
+	left: 15px;
+}
+#leftMain{
+	box-sizing: border-box;
+	border-bottom: 1px solid #dfdfe1;
+	width: 100%;
+	height: 105px;
+	padding: 17px 15px;
+}
+#wrods{
+	float: left;
+	margin-left: 20px;
+}
+.redword{
+	color: red;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+#wrods p{
+	margin-bottom: 10px;
+}
+#wrods p span{
+	color: red;
+}
+
+/*创建搜索框提示*/
+.message{
+	width: 85%;
+	/*height: 30px;*/
+	position: absolute;
+	top: 44px;
+	left: 0;
+	background: ghostwhite;
+	z-index: 3;
+	font-size: 13px;
+	padding: 5px 10px ;
+	box-sizing: border-box;
+}
+.message p{
+	line-height: 20px;
+}
+
+
+/*footer*/
+#footer{
+	width: 100%;
+	background: #fafafa;
+	height: 260px;
+	border-top: 1px solid #eee;
+}
+.foo{
+	/*border: 1px solid red;*/
+	margin: 0 auto;
+	width: 70%;
+	height: 260px;
+}
+#ft{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+#ft p{
+	font-size: 18px;
+}
+#ft p a{
+	font-size: 13px;
+	color: #444;
+}
+#ft .wai{
+	margin-top: 30px;
+}
+#ft .wai img{
+	vertical-align: top;
+}
+#ft .wai p{
+	display: inline-block;
+	margin-left: 10px;
+}
+#der{
+	margin-top: 40px;
+	font-size: 13px;
+	color: #444;
+}
+#der p{
+	margin: 0 auto;
+	line-height: 0.25rem;
+	text-align: center;
+}
