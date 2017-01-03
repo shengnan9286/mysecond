@@ -19,9 +19,11 @@
   "homepage": "https://github.com/shengnan9286/newrepository#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.1.1",
     "gulp-livereload": "^3.8.1",
     "gulp-uglify": "^2.0.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "imagemin-pngquant": "^5.0.0"
   },
   "dependencies": {
     "express": "^4.14.0"

@@ -3,12 +3,12 @@ var gulp=require("gulp"),
 	livereload=require("gulp-livereload"),
 	uglify=require("gulp-uglify")
 	imagemin=require("gulp-imagemin"),
-	pngquant=require("imagemin-pngquant"),
-	rename=require("gulp-rename");
+	pngquant=require("imagemin-pngquant");
+
 
 // 注册任务：
 gulp.task("webserver",function(){
-	gulp.src('./dist/html').pipe(webserver({
+	gulp.src('./dist').pipe(webserver({
 		livereload:true,
 		open:true
 	}))
@@ -16,7 +16,7 @@ gulp.task("webserver",function(){
 // html任务：
 gulp.task("html",function(){
 	return gulp.src("src/**/*.html")
-	.pipe(gulp.dest("dist/html"));
+	.pipe(gulp.dest("dist"));
 	//指明源文件路径并输出到发布环境
 });
 
@@ -28,9 +28,17 @@ gulp.task("css",function(){
 
 // script压缩任务：
 gulp.task("script",function(){
-	return gulp.src("src/js/*.js")
-		.pipe(uglify({preserveComment:"some"})) //压缩并保留注释
+	return gulp.src("src/js/**/*.js")
+		// .pipe(uglify({preserveComment:"some"})) //压缩并保留注释
 		.pipe(gulp.dest("dist/js"))
+})
+//压缩图片
+gulp.task("image",function(){
+	return gulp.src("src/images/*.{png,jpg,gif,svg}")
+		.pipe(imagemin({progressive:true,
+						use:[pngquant()]
+		})) //无损压缩
+		.pipe(gulp.dest("dist/images"))
 })
 
 // 监听任务：
@@ -39,4 +47,4 @@ gulp.task("watch",function(){
 });
 
 //默认执行任务：
-gulp.task("default",["sass","webserver","html","script","watch"]);
+gulp.task("default",["css","webserver","html","script","image","watch"]);

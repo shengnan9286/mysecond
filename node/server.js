@@ -17,12 +17,7 @@ app.get('/list2',function(req,res){
 app.get('/list3',function(req,res){
 	res.sendFile(__dirname+'/3.json')
 })
-app.get('/list4',function(req,res){
-	res.sendFile(__dirname+'/4.json')
-})
-app.get('/list5',function(req,res){
-	res.sendFile(__dirname+'/5.json')
-})
+
 var server=app.listen('3000',function(){
 	console.log("服务已启动")
 })
